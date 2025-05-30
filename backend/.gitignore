@@ -1,4 +1,4 @@
-ignoring the files from repository of git
+# ignoring the files from repository of git
 
 node_modules
 build

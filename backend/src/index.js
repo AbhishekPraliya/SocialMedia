@@ -8,8 +8,8 @@ import cookieParser from "cookie-parser"
 import cors from "cors";
 import { app,server } from "./lib/socket.js"
 import { deleteOldMessages,deleteOldPosts,deleteOldUsers } from "./controllers/post.controller.js"
-import cron from 'node-cron'
 import path from "path"
+// import cron from 'node-cron'
 
 dotenv.config();
 const PORT = process.env.PORT || 5001;
@@ -37,12 +37,12 @@ if(process.env.NODE_ENV==="production"){
     })
 }
 
-cron.schedule('0 12 * * *', () => {
-    console.log('Running daily deletion task...');
-    deleteOldUsers();
-    deleteOldMessages();
-    deleteOldPosts();
-});
+// cron.schedule('0 12 * * *', () => {
+//     console.log('Running daily deletion task...');
+//     deleteOldUsers();
+//     deleteOldMessages();
+//     deleteOldPosts();
+// });
 
 server.listen(PORT,()=>{
     console.log("Hello Abhishek, Server is running on port:"+PORT);
