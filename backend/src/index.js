@@ -37,12 +37,15 @@ if(process.env.NODE_ENV==="production"){
     })
 }
 
+
 // cron.schedule('0 12 * * *', () => {
 //     console.log('Running daily deletion task...');
 //     deleteOldUsers();
 //     deleteOldMessages();
 //     deleteOldPosts();
 // });
+
+
 
 server.listen(PORT,()=>{
     console.log("Hello Abhishek, Server is running on port:"+PORT);
